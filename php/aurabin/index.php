@@ -4,5 +4,8 @@
 
     print ' <br> texto usando print </br>'; 
     print " Texto usando print com aspas duplas";
-    
+    //Comentário de uma linha 
+    #comentário de uma linha 
+    /* Comentário de multiplas linhs 
+    pegou?  */
 ?>
