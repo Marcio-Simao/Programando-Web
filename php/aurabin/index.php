@@ -12,4 +12,6 @@
     pegou?  */
 
     $nome = "Márcio";
+
+    echo "My name is $nome but";
 ?>
