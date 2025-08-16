@@ -11,7 +11,5 @@
     /* Comentário de multiplas linhs 
     pegou?  */
 
-    $nome = "Márcio";
-
-    echo "my name is "
+    echo saudacao();
 ?>
