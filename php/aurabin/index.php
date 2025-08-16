@@ -6,6 +6,7 @@
     print " Texto usando print com aspas duplas";
 
     include 'configuracao.php';
+   
     //Comentário de uma linha 
     #comentário de uma linha 
     /* Comentário de multiplas linhs 
