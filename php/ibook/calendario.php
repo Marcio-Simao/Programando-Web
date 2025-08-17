@@ -11,20 +11,22 @@
         echo "<h1>CALENDARIO</h1>";
         echo "<hr>";
 
-        function linha() 
+        function linha($semana) 
         {
-            echo 
-            "
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            ";
+            echo "<tr>";
+                
+                for ($i=0; $i <= 6 ; $i++) { 
+                    if (isset($semana[$i]))
+                    {
+                        echo "<td>{$semana[0]}</td>";
+                    }
+                    else 
+                    {
+                        echo"<td></td>";
+                    }
+                }
+                
+            echo"</tr>";
         }
 
         function calendario()
@@ -42,6 +44,7 @@
                 }
                 $dia++;
             }
+            linha($semana);
         }
     ?>
     
@@ -55,11 +58,7 @@
             <th>Sex</th>
             <th>Sab</th>
         </tr>
-        <?php linha(); ?>
-        <?php linha(); ?>
-        <?php linha(); ?>
-        <?php linha(); ?>
-        <?php linha(); ?>
+        <?php calendario(); ?>
     </table>  
 </body>
 </html>
