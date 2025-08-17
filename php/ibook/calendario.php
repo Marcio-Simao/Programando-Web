@@ -10,6 +10,22 @@
     <?php 
         echo "<h1>CALENDARIO</h1>";
         echo "<hr>";
+
+        function linha() 
+        {
+            echo 
+            "
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            ";
+        }
     ?>
     
     <table border="1">
