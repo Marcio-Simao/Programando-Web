@@ -16,8 +16,7 @@
 
         $res_dia = $sabado - $hoje;
 
-        echo"<br> </br>faltam $res_dia dia para sábado!";
-       
+        echo"<br></br>faltam $res_dia dia para sábado!";  
     ?>
 </body>
 </html>
