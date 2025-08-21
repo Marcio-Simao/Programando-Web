@@ -8,7 +8,7 @@
 <body>
     <?php
         echo'hoje é ' . date('w');
-        echo' da semana ';
+        echo'º dia da semana ';
 
         $hoje = date('w');
 
