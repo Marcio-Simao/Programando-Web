@@ -7,8 +7,8 @@
 </head>
 <body>
     <?php
-        echo'' . date('D');
-        
+        echo'dia da semana: ' . date('w');
+
 
     ?>
 </body>
