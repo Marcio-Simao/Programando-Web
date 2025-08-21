@@ -3,11 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desafio 005 Capítulo 02</title>
+    <title>Desafio 007 capitulo 03</title>
 </head>
 <body>
-    <?php
-        echo ' estamos no mes de ' . date('M');
-    ?>
+    
 </body>
 </html>
