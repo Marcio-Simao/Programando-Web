@@ -62,7 +62,28 @@
             }
         }
     ?>
+    <h3>Janeiro</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
 
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(2); 
+        ?>   
+    </table>
+
+    <h3>Janeiro</h3>
     <!-- Estrutura da tabela -->
     <table border="1">
         <!-- Cabeçalho -->
