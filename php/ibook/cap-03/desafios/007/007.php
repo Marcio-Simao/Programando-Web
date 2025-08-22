@@ -6,60 +6,81 @@
     <title>Desafio 007 capitulo 03</title> <!-- Título que aparece na aba do navegador -->
 </head>
 <body>
+    <!-- Exibe a data de hoje (somente o número do dia) -->
+    <h1>Hoje é dia <?php echo"" . date('d')?></h1>
 
     <?php
         // Função que imprime uma linha (semana) da tabela do calendário
         function linha($semana)
         {
             echo "<tr>"; // Inicia uma linha da tabela
-            for ($i=0; $i <= 6 ; $i++)    // Loop para percorrer os 7 dias da semana
+
+            // Loop que percorre os 7 dias da semana
+            for ($i=0; $i <= 6 ; $i++)    
             {
-                if (isset($semana[$i]))  // Verifica se existe um valor no índice $i do array $semana
+                // Verifica se existe um valor para o índice $i no array $semana
+                if (isset($semana[$i]))  
                 {
-                    echo"<td>{$semana[$i]}</td>";    // Se existir, imprime o valor dentro de uma célula da tabela
+                    // Se o dia atual do array ($semana[$i]) for igual ao dia de hoje (date('d'))
+                    if($semana[$i] == date('d'))
+                    {
+                        // Imprime o número do dia em NEGRITO
+                        echo"<td><strong>{$semana[$i]}</strong></td>";    
+                    }  
+                    else 
+                    {
+                        // Caso contrário, imprime o número normalmente
+                        echo"<td>{$semana[$i]}</td>";    
+                    }  
                 }
                 else
                 {
-                    echo"<td></td>"; // Se não existir (dia vazio), imprime uma célula em branco
+                    // Se não existir valor nesse índice (semana incompleta), imprime célula vazia
+                    echo"<td></td>"; 
                 }    
             }                
             echo"</tr>"; // Fecha a linha da tabela
         }
-
     ?>
 
     <?php
-        // Função que constrói o calendário do mês (assumindo 31 dias)
+        // Função que constrói o calendário do mês (neste caso fixo com 31 dias)
         function calendario()
         {
-            $dia = 1;              // Variável que vai controlar os dias (de 1 a 31)
-            $semana = array();     // Array que vai armazenar os dias de uma semana
+            $dia = 1;              // Contador que começa em 1 (primeiro dia do mês)
+            $semana = array();     // Array que vai guardar os dias de uma semana
 
-            while ($dia <= 31) {   // Enquanto ainda houver dias do mês
-                array_push($semana, $dia); // Adiciona o dia atual dentro do array $semana
+            // Loop que gera os dias até 31
+            while ($dia <= 31) {   
+                array_push($semana, $dia); // Adiciona o dia atual no array da semana
 
-                if (count($semana) == 7) // Se já tiver 7 dias no array (semana completa)
+                // Quando o array já tiver 7 dias (semana completa)
+                if (count($semana) == 7) 
                 {
-                    linha($semana); // Imprime a semana na tabela
-                    $semana = array(); // Reinicia o array para a próxima semana
+                    linha($semana); // Chama a função linha() para imprimir a semana
+                    $semana = array(); // Reinicia o array para começar nova semana
                 }
-                $dia++; // Vai para o próximo dia
+                $dia++; // Passa para o próximo dia
             }
-            linha($semana); // Imprime a última semana (mesmo que incompleta)
+
+            // Imprime a última semana (mesmo que incompleta, com menos de 7 dias)
+            linha($semana); 
         } 
     ?>
 
-    <table border="1"> <!-- Cria uma tabela com borda -->
+    <!-- Estrutura da tabela do calendário -->
+    <table border="1"> 
         <tr>
-            <td>DON</td> <!-- Cabeçalho da tabela (domingo) -->
-            <td>SEG</td> <!-- segunda-feira -->
-            <td>TER</td> <!-- terça-feira -->
-            <td>QUA</td> <!-- quarta-feira -->
-            <td>QUI</td> <!-- quinta-feira -->
-            <td>SEX</td> <!-- sexta-feira -->
-            <td>SAB</td> <!-- sábado -->
+            <td>DON</td> <!-- Domingo -->
+            <td>SEG</td> <!-- Segunda-feira -->
+            <td>TER</td> <!-- Terça-feira -->
+            <td>QUA</td> <!-- Quarta-feira -->
+            <td>QUI</td> <!-- Quinta-feira -->
+            <td>SEX</td> <!-- Sexta-feira -->
+            <td>SAB</td> <!-- Sábado -->
         </tr>
-        <?php calendario(); ?> <!-- Chama a função que gera o calendário -->
+        <!-- Chama a função que gera todas as linhas do calendário -->
+        <?php calendario(); ?> 
     </table>
 
 </body>
