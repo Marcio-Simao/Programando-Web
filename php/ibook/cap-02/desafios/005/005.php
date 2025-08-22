@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Exiba também o nome do mês atual.</h2>
+    <hr>
     <?php
         echo ' estamos no mes de ' . date('M');
     ?>

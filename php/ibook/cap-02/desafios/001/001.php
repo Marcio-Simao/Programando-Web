@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Desafio: Na função date(), experimente mudar o Y para y. O que acontece?</h2>
+    <hr>
     <?php 
         echo'Hoje é ' . date('d/m/y');
         //percebi que usando o "y" minusculo aparece apenas os dois últimos digitos do ano 

@@ -6,8 +6,8 @@
     <title>Desafio 007 capitulo 03</title> <!-- Título que aparece na aba do navegador -->
 </head>
 <body>
-    <!--Desafio: Faça com que o calendário exiba o dia atual em negrito, usando a função date(). -->
-    
+    <h2>Desafio: Faça com que o calendário exiba o dia atual em negrito, usando a função date().</h2>
+    <hr>
     <!-- Exibe a data de hoje (somente o número do dia) -->
     <h1>Hoje é dia <?php echo"" . date('d')?></h1>
 

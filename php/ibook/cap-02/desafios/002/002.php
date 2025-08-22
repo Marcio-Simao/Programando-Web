@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Desafio: Você consegue exibir a hora no formato de 12 horas, am e pm?</h2>
+    <hr>
     <?php
         echo'Hoje é ' . date('d/m/y');
         //percebi que usando o "y" minusculo aparece apenas os dois últimos digitos do ano 

@@ -7,6 +7,7 @@
 </head>
 <body>
     <h2>Desafio: Esevocê tivesse que exibir o dia da semana? Como faria?</h2>
+    <hr>
     <?php
         echo" Hoje é " .  date('D');
     ?>

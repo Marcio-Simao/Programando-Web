@@ -6,10 +6,10 @@
     <title>Desafio 006 capitulo 03</title>
 </head>
 <body>
+    <h2>Faça uma página que exiba a hora e a frase “Bom dia”, “Boa tarde” ou “Boa
+ noite”, de acordo com a hora. Use a condicional if e a função date().</h2>
+    <hr>
     <?php
-        echo '<h1>Desafio 001: Saudação</h1>';
-        echo '<hr>';
-
         echo 'São ' . date('H'); echo ' Horas';
 
         if (date('H') >= 0 && date('H') < 12) 
