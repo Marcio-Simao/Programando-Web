@@ -6,6 +6,8 @@
     <title>Desafio 007 capitulo 03</title> <!-- Título que aparece na aba do navegador -->
 </head>
 <body>
+    <!--Desafio: Faça com que o calendário exiba o dia atual em negrito, usando a função date(). -->
+    
     <!-- Exibe a data de hoje (somente o número do dia) -->
     <h1>Hoje é dia <?php echo"" . date('d')?></h1>
 
@@ -71,13 +73,13 @@
     <!-- Estrutura da tabela do calendário -->
     <table border="1"> 
         <tr>
-            <td>DON</td> <!-- Domingo -->
-            <td>SEG</td> <!-- Segunda-feira -->
-            <td>TER</td> <!-- Terça-feira -->
-            <td>QUA</td> <!-- Quarta-feira -->
-            <td>QUI</td> <!-- Quinta-feira -->
-            <td>SEX</td> <!-- Sexta-feira -->
-            <td>SAB</td> <!-- Sábado -->
+            <td>Dom</td> <!-- Domingo -->
+            <td>Seg</td> <!-- Segunda-feira -->
+            <td>Ter</td> <!-- Terça-feira -->
+            <td>Qua</td> <!-- Quarta-feira -->
+            <td>Qui</td> <!-- Quinta-feira -->
+            <td>Sex</td> <!-- Sexta-feira -->
+            <td>Sáb</td> <!-- Sábado -->
         </tr>
         <!-- Chama a função que gera todas as linhas do calendário -->
         <?php calendario(); ?> 
