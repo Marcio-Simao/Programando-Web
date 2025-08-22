@@ -6,15 +6,15 @@
     <title>Desafio 007 capitulo 03</title>
 </head>
 <body>
-    <table>
+    <table border="1">
         <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+            <td>DON</td>
+            <td>SEG</td>
+            <td>TER</td>
+            <td>QUA</td>
+            <td>QUI</td>
+            <td>SEX</td>
+            <td>SAB</td>
         </tr>
     </table>
 </body>
