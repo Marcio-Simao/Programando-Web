@@ -10,24 +10,24 @@
     <?php
         function linha($semana)
         {
-            echo
-            "
-                <tr>
-                    <td>{$semana[0]}</td>
-                    <td>{$semana[1]}</td>
-                    <td>{$semana[2]}</td>
-                    <td>{$semana[3]}</td>
-                    <td>{$semana[4]}</td>
-                    <td>{$semana[5]}</td>
-                    <td>{$semana[6]}</td>
-                 </tr>
-            ";
+            echo "<tr>";
+            for ($i=0; $i <= 6 ; $i++)    
+            {
+                if (isset($semana[$i])) 
+                {
+                    echo"<td>{$semana[$i]}</td>";    
+                }
+                else
+                {
+                    echo"<td></td>";
+                }    
+            }                
+            echo"</tr>";
         }
 
     ?>
 
     <?php
-
         function calendario()
         {
             $dia = 1;
@@ -40,12 +40,10 @@
                     linha($semana);
                     $semana = array();
                 }
-
                 $dia++;
             }
             linha($semana);
         } 
-
     ?>
 
     <table border="1">
@@ -60,5 +58,6 @@
         </tr>
         <?php calendario(); ?>
     </table>
+
 </body>
 </html>
