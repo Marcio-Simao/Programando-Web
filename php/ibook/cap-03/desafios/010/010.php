@@ -121,8 +121,198 @@
         <!-- Chamada da função passando o início -->
         <?php 
             // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(5); 
+        ?>   
+    </table>
+
+    <h3>Abril de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
             calendario(1); 
         ?>   
     </table>
+    
+    <h3>Maio de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(3); 
+        ?>   
+    </table>
+
+    <h3>Junho de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(6); 
+        ?>   
+    </table>
+
+    <h3>Julho de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(1); 
+        ?>   
+    </table>    
+    
+     <h3>Agosto de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(4); 
+        ?>   
+    </table> 
+
+     <h3>Setembro de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(0); 
+        ?>   
+    </table> 
+
+     <h3>Outubro de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(2); 
+        ?>   
+    </table> 
+
+     <h3>Novembro de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(5); 
+        ?>   
+    </table> 
+
+     <h3>Dezembro de 2025</h3>
+    <!-- Estrutura da tabela -->
+    <table border="1">
+        <!-- Cabeçalho -->
+        <tr>
+            <td>Seg</td>
+            <td>Ter</td>
+            <td>Qua</td>
+            <td>Qui</td>
+            <td>Sex</td>
+            <td>Sáb</td>
+            <td>Dom</td>
+        </tr>    
+
+        <!-- Chamada da função passando o início -->
+        <?php 
+            // Exemplo: se o mês começar numa quarta (índice 2 → Seg=0, Ter=1, Qua=2)
+            calendario(0); 
+        ?>   
+    </table> 
+
 </body>
 </html>
