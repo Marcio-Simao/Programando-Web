@@ -8,20 +8,20 @@
 <body>
 
     <?php
-        function linha()
+        function linha($semana)
         {
             echo
-            '
-            <tr>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            ';
+            "
+                <tr>
+                    <td>{$semana[0]}</td>
+                    <td>{$semana[1]}</td>
+                    <td>{$semana[2]}</td>
+                    <td>{$semana[3]}</td>
+                    <td>{$semana[4]}</td>
+                    <td>{$semana[5]}</td>
+                    <td>{$semana[6]}</td>
+                 </tr>
+            ";
         }
 
     ?>
@@ -43,7 +43,7 @@
 
                 $dia++;
             }
-
+            linha($semana);
         } 
 
     ?>
@@ -58,9 +58,7 @@
             <td>SEX</td>
             <td>SAB</td>
         </tr>
-        <?php linha() ?>
-        <?php linha() ?>
-        <?php linha() ?>
+        <?php calendario(); ?>
     </table>
 </body>
 </html>
