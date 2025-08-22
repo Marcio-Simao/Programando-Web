@@ -6,6 +6,7 @@
     <title>Desafio 005 Capítulo 02</title>
 </head>
 <body>
+    <h2>Exiba também o nome do mês atual.</h2>
     <?php
         echo ' estamos no mes de ' . date('M');
     ?>
