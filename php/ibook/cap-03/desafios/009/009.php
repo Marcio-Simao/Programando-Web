@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8"> <!-- Suporte a caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Responsividade -->
-    <title>Desafio 008 Capítulo 03</title> <!-- Título da aba do navegador -->
+    <title>Desafio 009 Capítulo 03</title> <!-- Título da aba do navegador -->
 </head>
 <body>
     <!-- Enunciado do desafio -->
-    <h2>Desafio: Exiba os domingos em vermelho e os sábados em negrito.</h2>
+    <h2>Faça ocalendário começar em um dia que não seja um domingo.</h2>
     <hr>
 
     <?php
