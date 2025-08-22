@@ -6,6 +6,26 @@
     <title>Desafio 007 capitulo 03</title>
 </head>
 <body>
+
+    <?php
+        function linha()
+        {
+            echo
+            '
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            ';
+        }
+
+    ?>
+
     <table border="1">
         <tr>
             <td>DON</td>
