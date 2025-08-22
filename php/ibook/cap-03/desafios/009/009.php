@@ -22,26 +22,7 @@
                 // Se existir um valor nesse índice da semana
                 if (isset($semana[$i])) 
                 {
-                    // Caso seja domingo (primeira coluna = índice 0)
-                    if ($i == 0) 
-                    {
-                        // Exibe o número em vermelho
-                        echo"<td><span style='color: red;'>{$semana[$i]}</span></td>";
-                    }
-                    else 
-                    {
-                        // Caso seja sábado (última coluna = índice 6)
-                        if ($i == 6) 
-                        {
-                            // Exibe o número em negrito
-                            echo"<td><strong>{$semana[$i]}</strong></td>";    
-                        }
-                        else
-                        {
-                            // Para os outros dias da semana, exibe normalmente
-                            echo"<td>{$semana[$i]}</td>";
-                        }
-                    } 
+                    echo"<td>{$semana[$i]}</td>";
                 }
                 else 
                 {
