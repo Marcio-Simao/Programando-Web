@@ -12,14 +12,21 @@
         {
             echo"<tr>";
                 for ($i=0; $i <= 6 ; $i++) 
-                { 
-                    if ($semana[$i] == date('1')) 
+                {
+                    if (isset($semana[$i])) 
                     {
-                        echo"<td>{$semana[$i]}</td>";
+                        if ($semana[$i] == date('1')) 
+                        {
+                            echo"<td> <span style=' color: red;'> {$semana[$i]} </span> </td>";
+                        }
+                        else 
+                        {
+                            echo"<td>{$semana[$i]}</td>";   
+                        } 
                     }
                     else 
                     {
-                        echo"<td>{$semana[$i]}</td>";   
+                        echo"<td></td>";   
                     }    
                 }
             echo"</tr>";
