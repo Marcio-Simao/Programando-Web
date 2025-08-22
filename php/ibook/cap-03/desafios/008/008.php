@@ -8,22 +8,42 @@
 <body>
     <!--Desafio: Exiba os domingos em vermelho e os sábados em negrito. -->
     <?php
-        function linha()
+        function linha($semana)
         {
             echo"<tr>";
                 for ($i=0; $i <= 6 ; $i++) 
                 { 
                     if ($semana[$i] == date('1')) 
                     {
-                        # code...
+                        echo"<td>{$semana[$i]}</td>";
+                    }
+                    else 
+                    {
+                        echo"<td>{$semana[$i]}</td>";   
                     }    
                 }
             echo"</tr>";
         }
+    ?>
 
+    <?php    
         function calendario() 
         {
+            $dia = 1;
+            $semana = array();
             
+            while ($dia <= 31) 
+            {
+                array_push($semana, $dia);
+
+                if (count($semana) == 7) 
+                {
+                    linha($semana);
+                    $semana = array();
+                }
+                $dia++;
+            }
+            linha($semana);
         }
     ?>
 
