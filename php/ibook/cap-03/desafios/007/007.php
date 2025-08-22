@@ -36,6 +36,9 @@
             <td>SEX</td>
             <td>SAB</td>
         </tr>
+        <?php linha() ?>;
+        <?php linha() ?>;
+        <?php linha() ?>;
     </table>
 </body>
 </html>
