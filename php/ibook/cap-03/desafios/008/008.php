@@ -6,7 +6,7 @@
     <title>Desafio 008 Capítulo 03</title>
 </head>
 <body>
-    <!--Desafio: Exiba os domingos em vermelho e os sábados em negrito. -->
+    <h2>Desafio: Exiba os domingos em vermelho e os sábados em negrito.</h2>
     <?php
         function linha($semana)
         {
@@ -15,14 +15,22 @@
                 {
                     if (isset($semana[$i])) 
                     {
-                        if ($semana[$i] == date('1')) 
+                        if ($i == 0) 
                         {
                             echo"<td> <span style=' color: red;'> {$semana[$i]} </span> </td>";
                         }
                         else 
                         {
-                            echo"<td>{$semana[$i]}</td>";   
+                            if ($i == 6) 
+                            {
+                                echo"<td> <strong> {$semana[$i]} </strong> </td>";    
+                            }
+                            else
+                            {
+                                echo"<td>{$semana[$i]}</td>";
+                            }
                         } 
+
                     }
                     else 
                     {
@@ -63,7 +71,8 @@
             <td>Qui</td>
             <td>Sex</td>
             <td>Sáb</td>
-        </tr>       
+        </tr>    
+        <?php calendario() ?>   
     </table>
 </body>
 </html>
