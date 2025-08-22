@@ -6,6 +6,16 @@
     <title>Desafio 007 capitulo 03</title>
 </head>
 <body>
-    
+    <table>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+    </table>
 </body>
 </html>
