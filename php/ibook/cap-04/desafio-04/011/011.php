@@ -11,11 +11,16 @@
     <h1>Lista de contactos</h1>
     <form action="">
         <fieldset>
-            <legend>Lista de contactos<legend>  
+            <legend>Lista de contactos</legend>  
                 <label>
                     Nome: 
                     <input type="text" name="nome">
                 </label>  
+                <br> <br>
+                <label>
+                    Número de Telefone: 
+                    <input type="number" name="num_tel" id="">
+                </label>
 
                 <input type="submit" value="Cadastrar">
         </fieldset>  
