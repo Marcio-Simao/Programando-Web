@@ -28,7 +28,7 @@
                     <strong>Email</strong> <br>
                     <input type="email" name="" id="">
                 </label>
-
+                <br> <br>
                 <input type="submit" value="Cadastrar">
         </fieldset>  
     </form>
