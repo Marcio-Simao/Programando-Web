@@ -26,11 +26,17 @@
 
                 <label>
                     <strong>Email</strong> <br>
-                    <input type="email" name="" id="">
+                    <input type="email" name="email" id="">
                 </label>
                 <br> <br>
                 <input type="submit" value="Cadastrar">
         </fieldset>  
     </form>
+    <?php 
+        if (isset($_GET['nome'])) 
+        {
+            $_SESSION['lista_tarefas'][] = $_GET['nome'];    
+        }
+    ?>
 </body>
 </html>
