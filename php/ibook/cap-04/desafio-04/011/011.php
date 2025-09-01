@@ -18,8 +18,15 @@
                 </label>  
                 <br> <br>
                 <label>
-                    Número de Telefone: <br>
+                    <strong>Número de Telefone</strong> <br>
                     <input type="number" name="num_tel" id="">
+                </label>
+
+                <br> <br>
+
+                <label>
+                    Email
+                    <input type="email" name="" id="">
                 </label>
 
                 <input type="submit" value="Cadastrar">
