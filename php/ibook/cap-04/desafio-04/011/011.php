@@ -37,6 +37,27 @@
         {
             $_SESSION['lista_tarefas'][] = $_GET['nome'];    
         }
+        if (isset($_GET['num_tel'])) 
+        {
+            $_SESSION['lista_tarefas'][] = $_GET['num_tel'];
+        }
+        if(isset($_SESSION['email']))
+        {
+            $_SESSION['lista_tarefas'][] = $_GET['email'];
+        }    
+        $lista_tarefas = array();
+        if (isset($_SESSION['lista_tarefas'])) 
+        {
+            $lista_tarefas = $_SESSION['lista_tarefas'];
+        }
     ?>
+    <br> <br>
+
+    <table>
+        <tr>
+            <th>Nomes</th>
+        </tr>
+        
+    </table>
 </body>
 </html>
