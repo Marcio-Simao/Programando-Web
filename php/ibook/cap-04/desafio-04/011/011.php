@@ -13,12 +13,12 @@
         <fieldset>
             <legend>Lista de contactos</legend>  
                 <label>
-                    Nome: 
+                    Nome: <br>
                     <input type="text" name="nome">
                 </label>  
                 <br> <br>
                 <label>
-                    Número de Telefone: 
+                    Número de Telefone: <br>
                     <input type="number" name="num_tel" id="">
                 </label>
 
