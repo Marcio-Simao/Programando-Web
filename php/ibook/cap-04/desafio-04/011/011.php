@@ -13,7 +13,7 @@
         <fieldset>
             <legend>Lista de contactos</legend>  
                 <label>
-                    Nome: <br>
+                    <strong>Nome</strong> <br>
                     <input type="text" name="nome">
                 </label>  
                 <br> <br>
@@ -25,7 +25,7 @@
                 <br> <br>
 
                 <label>
-                    Email
+                    <strong>Email</strong>
                     <input type="email" name="" id="">
                 </label>
 
