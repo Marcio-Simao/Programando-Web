@@ -25,7 +25,7 @@
                 <br> <br>
 
                 <label>
-                    <strong>Email</strong>
+                    <strong>Email</strong> <br>
                     <input type="email" name="" id="">
                 </label>
 
