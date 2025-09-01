@@ -5,6 +5,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gerenciador de Tarefas</title>
+    <style>
+        body{
+            background-color: #4f6ab1ff;
+            color: white;
+        }
+    </style>
 </head>
 <body>
     <h1>Gerenciador de Tarefas</h1>
@@ -22,7 +28,7 @@
     <?php
         if (isset($_GET['nome']))
         {
-           $_SESSION['$lista_tarefas'][] = $_GET['nome'];
+           $_SESSION['lista_tarefas'][] = $_GET['nome'];
         }
         $lista_tarefas = array();
         if(isset($_SESSION['lista_tarefas']))
