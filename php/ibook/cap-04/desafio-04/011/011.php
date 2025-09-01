@@ -35,7 +35,7 @@
     <?php 
         if (isset($_GET['nome'])) 
         {
-            $_SESSION['lista_nome'][] = $_GET['nome'];    
+            $_SESSION['lista_nomes'][] = $_GET['nome'];    
         }
         if (isset($_GET['num_tel'])) 
         {
@@ -47,9 +47,14 @@
         }    
         $lista_nomes = array();
         $lista_email = array();
+        $lista_num_tel = array();
+        if (isset($_SESSION['lista_nomes'])) 
+        {
+            $lista_nomes = $_SESSION['lista_nomes'];
+        }
         if (isset($_SESSION['lista_email'])) 
         {
-            $lista_tarefas = $_SESSION['lista_email'];
+            $lista_email = $_SESSION['lista_email'];
         }
     ?>
     <br> <br>
@@ -57,9 +62,12 @@
     <table>
         <tr>
             <th>Nomes</th>
+            <th>Número de Telefone</th>
+            <th>Email</th>
         </tr>
         <?php foreach ($lista_email as $email): ?>
         <tr>
+            <td><?php echo $email ?></td>
             <td><?php echo $email ?></td>
         </tr>    
          
