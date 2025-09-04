@@ -56,6 +56,10 @@
         {
             $lista_email = $_SESSION['lista_email'];
         }
+        if (isset($_SESSION['lista_num_tel'])) 
+        {
+            $lista_num_tel = $_SESSION['lista_num_tel'];
+        }
     ?>
     <br> <br>
 
