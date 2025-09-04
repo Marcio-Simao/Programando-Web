@@ -9,41 +9,39 @@
 <body>
     <!--  Desafio: Usando os mesmos conceitos que vimos até agora, monte uma lista de contatos na qual devem ser cadastrados o nome, o telefone e o e-mail de cada contato. -->
     <h1>Lista de contactos</h1>
+
     <form action="">
         <fieldset>
             <legend>Lista de contactos</legend>  
                 <label>
                     <strong>Nome</strong> <br>
-                    <input type="text" name="nome">
+                    <input type="text" name="nome" require>
                 </label>  
                 <br> <br>
                 <label>
                     <strong>Número de Telefone</strong> <br>
-                    <input type="number" name="num_tel" id="">
+                    <input type="number" name="num_tel" require>
                 </label>
 
                 <br> <br>
 
                 <label>
                     <strong>Email</strong> <br>
-                    <input type="email" name="email" id="">
+                    <input type="email" name="email" require>
                 </label>
                 <br> <br>
                 <input type="submit" value="Cadastrar">
         </fieldset>  
     </form>
+    
     <?php 
-        if (isset($_GET['nome'])) 
+        if (isset($_GET['nome']) && isset($_GET['num_tel']) && isset($_SESSION['email'])) 
         {
-            $_SESSION['lista_nomes'][] = $_GET['nome'];    
-        }
-        if (isset($_GET['num_tel'])) 
-        {
-            $_SESSION['lista_num_tel'][] = $_GET['num_tel'];
-        }
-        if(isset($_SESSION['email']))
-        {
-            $_SESSION['lista_email'][] = $_GET['email'];
+            $_SESSION['lista_contacto'] = [ 
+                "nome" => $_GET['nome'], 
+                "num_tel" => $_GET['num_tel'], 
+                "email" => $_GET['email']
+            ];
         }    
         $lista_nomes = array();
         $lista_email = array();
