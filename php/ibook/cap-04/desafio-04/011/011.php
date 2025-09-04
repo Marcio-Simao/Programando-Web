@@ -43,21 +43,6 @@
                 "email" => $_GET['email']
             ];
         }    
-        $lista_nomes = array();
-        $lista_email = array();
-        $lista_num_tel = array();
-        if (isset($_SESSION['lista_nomes'])) 
-        {
-            $lista_nomes = $_SESSION['lista_nomes'];
-        }
-        if (isset($_SESSION['lista_email'])) 
-        {
-            $lista_email = $_SESSION['lista_email'];
-        }
-        if (isset($_SESSION['lista_num_tel'])) 
-        {
-            $lista_num_tel = $_SESSION['lista_num_tel'];
-        }
     ?>
     <br> <br>
 
