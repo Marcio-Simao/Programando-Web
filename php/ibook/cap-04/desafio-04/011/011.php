@@ -35,24 +35,24 @@
     </form>
     
     <?php 
-        if (isset($_GET['nome']) && isset($_GET['num_tel']) && isset($_SESSION['email'])) 
+        if (isset($_GET['nome']) && isset($_GET['num_tel']) && isset($_GET['email'])) 
         {
             $novocadastro = [ 
                 "nome" => $_GET['nome'], 
                 "num_tel" => $_GET['num_tel'], 
                 "email" => $_GET['email']
-            ];
-        }  
+            ]; 
         
-        if (!isset($_SESSION['lista_contacto'])) 
-        {
-            $_SESSION['lista_contacto'] = [];       
-        }
+            if (!isset($_SESSION['lista_contacto'])) 
+            {
+                $_SESSION['lista_contacto'] = [];       
+            }
 
-        $_SESSION['lista_contacto'][] = $novocadastro;
+            $_SESSION['lista_contacto'][] = $novocadastro;
+        }
     ?>
     <br> <br>
-    <?php if (isset($_SESSION['lista_contacto']) && count($_SESSION['lista_contacto']) > 0): ?>    
+    <?php if (!empty($_SESSION['lista_contacto'])): ?>    
     <h2>Todos os cadastros armazenados</h2>
     <table>
         <tr>
