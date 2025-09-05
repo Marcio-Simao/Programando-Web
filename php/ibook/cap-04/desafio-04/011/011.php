@@ -10,24 +10,24 @@
     <!--  Desafio: Usando os mesmos conceitos que vimos até agora, monte uma lista de contatos na qual devem ser cadastrados o nome, o telefone e o e-mail de cada contato. -->
     <h1>Lista de contactos</h1>
 
-    <form method="$_GET" action="">
+    <form method="get" action="">
         <fieldset>
             <legend>Lista de contactos</legend>  
                 <label>
                     <strong>Nome</strong> <br>
-                    <input type="text" name="nome" require>
+                    <input type="text" name="nome" required>
                 </label>  
                 <br> <br>
                 <label>
                     <strong>Número de Telefone</strong> <br>
-                    <input type="number" name="num_tel" require>
+                    <input type="number" name="num_tel" required>
                 </label>
 
                 <br> <br>
 
                 <label>
                     <strong>Email</strong> <br>
-                    <input type="email" name="email" require>
+                    <input type="email" name="email" required>
                 </label>
                 <br> <br>
                 <input type="submit" value="Cadastrar">
