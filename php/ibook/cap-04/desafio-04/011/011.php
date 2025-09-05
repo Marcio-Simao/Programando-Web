@@ -1,4 +1,15 @@
 <?php SESSION_START();?>
+
+<?php 
+    // Se o botão "limpar" foi clicado
+    if (isset($_GET["limpar"])) 
+    {
+        session_unset();
+        session_destroy();
+        header("Location: 011.php");
+        exit;
+    }
+?>
 <!DOCTYPE html>
 <html lang="pt">
 <head>
@@ -69,6 +80,10 @@
          
          <?php endforeach ?>   
     </table>
+
+    <form method="get" action="">
+        <input type="submit" name="limpar" value="Limpar Sessão">
+    </form>
 
     <?php endif ?>
 </body>
