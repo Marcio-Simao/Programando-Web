@@ -52,20 +52,24 @@
         $_SESSION['lista_contacto'][] = $novocadastro;
     ?>
     <br> <br>
-
+    <?php if (isset($_SESSION['lista_contacto']) && count($_SESSION['lista_contacto']) > 0): ?>    
+    <h2>Todos os cadastros armazenados</h2>
     <table>
         <tr>
             <th>Nomes</th>
             <th>Número de Telefone</th>
             <th>Email</th>
         </tr>
-        <?php foreach ($lista_email as $email): ?>
+        <?php foreach ($_SESSION['lista_contacto'] as $cadastro): ?>
         <tr>
-            <td><?php echo $email ?></td>
-            <td><?php echo $email ?></td>
+            <td><?php echo $cadastro['nome']; ?></td>
+            <td><?php echo $cadastro['num_tel'] ?></td>
+            <td><?php echo $cadastro['email'] ?></td>
         </tr>    
          
          <?php endforeach ?>   
     </table>
+
+    <?php endif ?>
 </body>
 </html>
