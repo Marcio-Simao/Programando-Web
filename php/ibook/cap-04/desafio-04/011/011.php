@@ -10,7 +10,7 @@
     <!--  Desafio: Usando os mesmos conceitos que vimos até agora, monte uma lista de contatos na qual devem ser cadastrados o nome, o telefone e o e-mail de cada contato. -->
     <h1>Lista de contactos</h1>
 
-    <form action="">
+    <form method="$_GET" action="">
         <fieldset>
             <legend>Lista de contactos</legend>  
                 <label>
@@ -35,24 +35,24 @@
     </form>
     
     <?php 
-        if (isset($_GET['nome']) && isset($_GET['num_tel']) && isset($_GET['email'])) 
+        if (isset($_GET["nome"]) && isset($_GET["num_tel"]) && isset($_GET["email"])) 
         {
             $novocadastro = [ 
-                "nome" => $_GET['nome'], 
-                "num_tel" => $_GET['num_tel'], 
-                "email" => $_GET['email']
+                "nome" => $_GET["nome"], 
+                "num_tel" => $_GET["num_tel"], 
+                "email" => $_GET["email"]
             ]; 
         
-            if (!isset($_SESSION['lista_contacto'])) 
+            if (!isset($_SESSION["lista_contacto"])) 
             {
-                $_SESSION['lista_contacto'] = [];       
+                $_SESSION["lista_contacto"] = [];       
             }
 
-            $_SESSION['lista_contacto'][] = $novocadastro;
+            $_SESSION["lista_contacto"][] = $novocadastro;
         }
     ?>
     <br> <br>
-    <?php if (!empty($_SESSION['lista_contacto'])): ?>    
+    <?php if (!empty($_SESSION["lista_contacto"])): ?>    
     <h2>Todos os cadastros armazenados</h2>
     <table>
         <tr>
@@ -60,11 +60,11 @@
             <th>Número de Telefone</th>
             <th>Email</th>
         </tr>
-        <?php foreach ($_SESSION['lista_contacto'] as $cadastro): ?>
+        <?php foreach ($_SESSION["lista_contacto"] as $cadastro): ?>
         <tr>
-            <td><?php echo $cadastro['nome']; ?></td>
-            <td><?php echo $cadastro['num_tel'] ?></td>
-            <td><?php echo $cadastro['email'] ?></td>
+            <td><?php echo $cadastro["nome"]; ?></td>
+            <td><?php echo $cadastro["num_tel"]; ?></td>
+            <td><?php echo $cadastro["email"]; ?></td>
         </tr>    
          
          <?php endforeach ?>   
