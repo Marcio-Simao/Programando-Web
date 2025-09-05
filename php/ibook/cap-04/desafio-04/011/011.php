@@ -37,12 +37,19 @@
     <?php 
         if (isset($_GET['nome']) && isset($_GET['num_tel']) && isset($_SESSION['email'])) 
         {
-            $_SESSION['lista_contacto'] = [ 
+            $novocadastro = [ 
                 "nome" => $_GET['nome'], 
                 "num_tel" => $_GET['num_tel'], 
                 "email" => $_GET['email']
             ];
-        }    
+        }  
+        
+        if (!isset($_SESSION['lista_contacto'])) 
+        {
+            $_SESSION['lista_contacto'] = [];       
+        }
+
+        $_SESSION['lista_contacto'][] = $novocadastro;
     ?>
     <br> <br>
 
