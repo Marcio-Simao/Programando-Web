@@ -23,6 +23,29 @@
                 <!-- Campo de texto para inserir o nome da tarefa -->
                 <input type="text" name="nome">
             </label>
+            <label>
+                Descrição(Opcional):
+                <textarea name="descrecao"></textarea>
+            </label>
+            <label>
+                Prazo (opcional):
+                <input type="text" name="prazo">
+            </label>
+            <fieldset>
+                <legend>Prioridade:</legend>
+                <label>
+                    <input type="radio" name="prioridade" value="baixa" checked>
+                    baixa
+                    <input type="radio" name="prioridade" value="media">
+                    media
+                    <input type="radio" name="prioridade" value="alta">
+                    alta
+                </label>
+            </fieldset>
+            <label>
+                tarefa concluída:
+                <input type="checkbox" name="concluida" value="sim">
+            </label>
             <!-- Botão para enviar o formulário -->
             <input type="submit" value="cadastrar">
         </fieldset>    
