@@ -1,26 +1,23 @@
-<?php session_start();?> 
-<!-- Inicia a sessão para armazenar dados entre diferentes requisições do usuário -->
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8"> <!-- Suporte a caracteres especiais -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajuste para dispositivos móveis -->
-    <title>Gerenciador de Tarefas</title>
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres da página como UTF-8 (suporte a acentos e caracteres especiais) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Faz a página se ajustar bem em dispositivos móveis -->
+    <title>Gerenciador de Tarefas</title> <!-- Título da aba do navegador -->
     <style>
         body{
-            background-color: #4f6ab1ff; /* Cor de fundo da página */
-            color: white; /* Cor do texto */
+            background-color: #4f6ab1ff; /* Define a cor de fundo da página */
+            color: white; /* Define a cor do texto */
         }
     </style>
 </head>
 <body>
-    <h1>Gerenciador de Tarefas</h1>
+    <h1>Gerenciador de Tarefas</h1> <!-- Título principal exibido na página -->
 
     <!-- Formulário para cadastrar nova tarefa -->
-    <form action="">
+    <form action=""> <!-- Formulário que envia os dados pela URL (método GET por padrão) -->
         <fieldset>
-            <legend>Nova tarefa</legend>
+            <legend>Nova tarefa</legend> <!-- Legenda para o grupo de campos -->
             <label>
                 Tarefa:
                 <!-- Campo de texto para inserir o nome da tarefa -->
@@ -32,20 +29,28 @@
     </form>
 
     <?php
-        // Se foi enviado um valor pelo formulário (via GET)
-        if (isset($_GET['nome']))
-        {
-           // Armazena a nova tarefa dentro da sessão
-           $_SESSION['lista_tarefas'][] = $_GET['nome'];
+        // Cria um array vazio de tarefas (caso não haja cookie ainda)
+        $lista_tarefas = [];
+
+        // Verifica se já existe o cookie 'lista_tarefas'
+        if (isset($_COOKIE['lista_tarefas'])) {
+            // Se existir, pega o conteúdo (JSON) e converte de volta para array
+            $lista_tarefas = json_decode($_COOKIE['lista_tarefas'], true);
         }
 
-        // Cria um array vazio para as tarefas
-        $lista_tarefas = array();
+        // Verifica se foi enviado algum valor no campo "nome" do formulário
+        if (isset($_GET['nome']) && $_GET['nome'] != "") {
+            // Adiciona a nova tarefa ao array de tarefas
+            $lista_tarefas[] = $_GET['nome'];
 
-        // Se já existe uma lista de tarefas na sessão, carrega para a variável
-        if(isset($_SESSION['lista_tarefas']))
-        {
-            $lista_tarefas = $_SESSION['lista_tarefas'];
+            // Salva o array atualizado dentro de um cookie
+            // json_encode transforma o array em texto JSON
+            // time() + 3600 define a expiração do cookie para 1 hora a partir de agora
+            setcookie('lista_tarefas', json_encode($lista_tarefas), time() + 3600);
+
+            // Recarrega a página para evitar que a tarefa seja cadastrada duas vezes se o usuário recarregar manualmente
+            header("Location: ".$_SERVER['PHP_SELF']);
+            exit; // Garante que o script para aqui depois do redirecionamento
         }
     ?>
 
@@ -54,12 +59,14 @@
     <!-- Tabela para exibir as tarefas cadastradas -->
     <table border="1">
         <tr>
-            <th>Tarefas</th>
+            <th>Tarefas</th> <!-- Cabeçalho da tabela -->
         </tr>
-        <!-- Loop para exibir cada tarefa armazenada -->
+        <!-- Loop para percorrer o array de tarefas -->
         <?php foreach ($lista_tarefas as $tarefa) : ?>
         <tr>
-            <td><?php echo $tarefa ?></td> <!-- Mostra a tarefa na tabela -->
+            <!-- Exibe cada tarefa em uma nova linha da tabela -->
+            <!-- htmlspecialchars() impede a execução de código malicioso (XSS) -->
+            <td><?php echo htmlspecialchars($tarefa); ?></td>
         </tr>    
         <?php endforeach; ?>
     </table>
