@@ -19,33 +19,33 @@
         <fieldset>
             <legend>Nova tarefa</legend>
             <label>
-                Tarefa:
+                Tarefa: <br>
                 <!-- Campo de texto para inserir o nome da tarefa -->
                 <input type="text" name="nome">
-            </label>
+            </label> <br> <br>
             <label>
-                Descrição(Opcional):
+                Descrição(Opcional): <br>
                 <textarea name="descrecao"></textarea>
-            </label>
+            </label> <br> <br>
             <label>
-                Prazo (opcional):
+                Prazo (opcional): <br>
                 <input type="text" name="prazo">
             </label>
             <fieldset>
                 <legend>Prioridade:</legend>
                 <label>
                     <input type="radio" name="prioridade" value="baixa" checked>
-                    baixa
+                    baixa <br>
                     <input type="radio" name="prioridade" value="media">
-                    media
+                    media <br> 
                     <input type="radio" name="prioridade" value="alta">
-                    alta
+                    alta <br>
                 </label>
             </fieldset>
             <label>
                 tarefa concluída:
                 <input type="checkbox" name="concluida" value="sim">
-            </label>
+            </label> <br> <br>
             <!-- Botão para enviar o formulário -->
             <input type="submit" value="cadastrar">
         </fieldset>    

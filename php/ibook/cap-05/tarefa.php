@@ -4,8 +4,9 @@
     /* Inicia a sessão para armazenar dados entre diferentes requisições do usuário */
 
     // Se foi enviado um valor pelo formulário (via GET)
-    if (isset($_GET['nome']))
+    if (isset($_GET['nome']) && $_GET['nome'] != '')
     {
+        $tar
        // Armazena a nova tarefa dentro da sessão
        $_SESSION['lista_tarefas'][] = $_GET['nome'];
     }
