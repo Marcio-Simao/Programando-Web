@@ -6,7 +6,7 @@
     // Se foi enviado um valor pelo formulário (via GET)
     if (isset($_GET['nome']) && $_GET['nome'] != '')
     {
-        $tar
+        //$tar
        // Armazena a nova tarefa dentro da sessão
        $_SESSION['lista_tarefas'][] = $_GET['nome'];
     }
