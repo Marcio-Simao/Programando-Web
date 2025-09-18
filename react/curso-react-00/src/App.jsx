@@ -11,10 +11,11 @@ function App() {
           setMessage("Olá, fui clicado!");
         }}
       >
-
+        Clica Aqui
       </button>
     </div>
   );
 
-
 }
+
+export default App
