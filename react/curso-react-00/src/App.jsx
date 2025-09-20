@@ -3,7 +3,7 @@ import Tasks from "./components/Tasks";
 
 function App() {
   return(
-    <div>
+    <div className="flex">
       <h1 className="text-red-500 text-3xl">Gerenciador de tarefas</h1>
       <AddTask />
       <Tasks />
