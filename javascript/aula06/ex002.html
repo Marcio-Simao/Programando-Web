@@ -18,11 +18,18 @@
     <script>
       //  console.log()
        // window.confirm('está gostando') //janela com botão Ok
-        var n1 = Number.parseInt(window.prompt('Digite o primeiro número'))
-        var n2 = Number.parseInt(window.prompt('Digite o segundo número'))
+        var n1 = Number(window.prompt('Digite o primeiro número'))
+        var n2 = Number(window.prompt('Digite o segundo número'))
         var soma = n1 + n2
         window.alert('a soma entre ' +  n1 + ' e ' +  n2 + '  é  ' + soma)
 
+        //(number + number) -> adção
+        //(string + string) -> concatenação
+        //Number.parseInt(variavel) -> coversão para inteiro
+        //Number.parseFloat(variavel) -> coversão para real
+        //Number(variavel) -> coversão para o tipo number
+        //String(variavel) -> coversão para string
+        //variavel.toString()-> coversão para string
     </script>
 </body>
 </html>
